@@ -1,0 +1,55 @@
+grf {
+    grfid: "CH\04\01";
+    name: string(STR_GRF_NAME);     // name of GRF
+    desc: string(STR_GRF_DESC);     // description of GRF
+    version: 1;
+    min_compatible_version: 0;
+
+    // parameter for initial spawn
+     param 0 {
+        param_spawn {
+        name: string(STR_PARAM_NAME_SPAWN);
+        desc: string(STR_PARAM_DESC_SPAWN);
+        def_value: 0;
+        type: bool;
+        }
+    }
+}
+
+
+cargotable {
+	VALU, GOLD, DIAM
+}
+
+
+if (param_spawn == 0) {
+    item(FEAT_INDUSTRIES, boob) {
+        property {
+            substitute: (climate == CLIMATE_TEMPERATE) ? INDUSTRYTYPE_TEMPERATE_BANK : INDUSTRYTYPE_TROPICAL_ARCTIC_BANK;
+            cargo_types: [
+                accept_cargo("VALU"),
+                accept_cargo("GOLD"),
+                accept_cargo("DIAM")
+            ];
+            prob_random:    0;
+            prob_in_game:   0;
+        }
+    }
+}
+
+if (param_spawn == 1) {
+    item(FEAT_INDUSTRIES, boob) {
+        property {
+            substitute: (climate == CLIMATE_TEMPERATE) ? INDUSTRYTYPE_TEMPERATE_BANK : INDUSTRYTYPE_TROPICAL_ARCTIC_BANK;
+            cargo_types: [
+                accept_cargo("VALU"),
+                accept_cargo("GOLD"),
+                accept_cargo("DIAM")
+            ];
+            prob_random:    1;
+            prob_in_game:   0;
+        }
+    }
+}
+
+
