@@ -5,11 +5,11 @@
 So, using graphics from OpenGFX I have made a simple newgrf that lets you build vanilla banks.
 These accept gold or valuables (depending on your setting in ECS Town vector), just put it *after ECS vectors*.
 
-![Order of NewGRFs.](/_readme/01.png)
+![Order of NewGRFs.](/_readme/01.PNG)
 
 It also has a parameter to generate banks at the start of a game:
 
-![Parameter.](/_readme/02.png)
+![Parameter.](/_readme/02.PNG)
 
 
 
